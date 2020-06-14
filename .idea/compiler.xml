@@ -6,6 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core-api" />
+        <module name="application" />
+        <module name="core-impl" />
+        <module name="fx-views" />
         <module name="disk-persistence" />
       </profile>
     </annotationProcessing>

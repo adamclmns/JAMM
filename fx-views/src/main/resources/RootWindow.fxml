@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ /*
+  ~ ' _   _ ______ _   _
+  ~ | | | ||  ___| | | |                            Copyright -  AdamClmns 2020-03
+  ~ | | | || |_  | | | |
+  ~ | | | ||  _| | | | |
+  ~ | |_| || |_  | |_| |
+  ~  \___(_)_(_)  \___(_)
+  ~
+  ~
+  ~  _   _       _     _            _   _  __ _          _  ______ _ _        _   _ _   _ _ _ _
+  ~ | | | |     (_)   | |          | | (_)/ _(_)        | | |  ___(_) |      | | | | | (_) (_) |
+  ~ | | | |_ __  _  __| | ___ _ __ | |_ _| |_ _  ___  __| | | |_   _| | ___  | | | | |_ _| |_| |_ _   _
+  ~ | | | | '_ \| |/ _` |/ _ \ '_ \| __| |  _| |/ _ \/ _` | |  _| | | |/ _ \ | | | | __| | | | __| | | |
+  ~ | |_| | | | | | (_| |  __/ | | | |_| | | | |  __/ (_| | | |   | | |  __/ | |_| | |_| | | | |_| |_| |
+  ~  \___/|_| |_|_|\__,_|\___|_| |_|\__|_|_| |_|\___|\__,_| \_|   |_|_|\___|  \___/ \__|_|_|_|\__|\__, |
+  ~                                                                                                __/ |
+  ~                                                                                               |___/
+  ~  */
+  ~
+  -->
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+      fx:controller="com.adamclmns.ufo.fx.controllers.RootWindow" fx:id="rootWindow">
+    <fx:include source="menuBar.fxml" fx:id="menuBar"/>
+    <HBox maxHeight="100" alignment="CENTER">
+        <fx:include source="mediaControls.fxml" fx:id="mediaControls"/>
+        <fx:include source="mediaSearch.fxml" fx:id="searchBar"/>
+    </HBox>
+    <HBox VBox.vgrow="ALWAYS">
+        <TabPane>
+            <Tab closable="false" text="Library">
+                <fx:include source="sideBar.fxml" fx:id="sideBar"/>
+            </Tab>
+            <Tab closable="false" text="File Browser">
+
+            </Tab>
+        </TabPane>
+        <fx:include source="mediaView.fxml" fx:id="mediaView" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"/>
+    </HBox>
+</VBox>
+

@@ -16,6 +16,10 @@
     <url>http://www.adamclmns.com/JAMM</url>
     <modules>
         <module>disk-persistence</module>
+        <module>fx-views</module>
+        <module>core-api</module>
+        <module>core-impl</module>
+        <module>application</module>
     </modules>
 
     <properties>
@@ -78,21 +82,25 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ufu-persistence</artifactId>
+                <groupId>com.adamclmns.jamm</groupId>
+                <artifactId>fx-views</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ufu-fxApplication</artifactId>
+                <groupId>com.adamclmns.jamm</groupId>
+                <artifactId>disk-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>filestorage</artifactId>
+                <groupId>com.adamclmns.jamm</groupId>
+                <artifactId>core-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.adamclmns.jamm</groupId>
+                <artifactId>core-impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- Java FX Dependencies -->
             <dependency>
                 <groupId>org.openjfx</groupId>

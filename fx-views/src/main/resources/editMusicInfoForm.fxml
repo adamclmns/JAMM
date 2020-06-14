@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ /*
+  ~ ' _   _ ______ _   _
+  ~ | | | ||  ___| | | |                            Copyright -  AdamClmns 2020-03
+  ~ | | | || |_  | | | |                                                                                
+  ~ | | | ||  _| | | | |
+  ~ | |_| || |_  | |_| |
+  ~  \___(_)_(_)  \___(_)
+  ~
+  ~
+  ~  _   _       _     _            _   _  __ _          _  ______ _ _        _   _ _   _ _ _ _
+  ~ | | | |     (_)   | |          | | (_)/ _(_)        | | |  ___(_) |      | | | | | (_) (_) |
+  ~ | | | |_ __  _  __| | ___ _ __ | |_ _| |_ _  ___  __| | | |_   _| | ___  | | | | |_ _| |_| |_ _   _
+  ~ | | | | '_ \| |/ _` |/ _ \ '_ \| __| |  _| |/ _ \/ _` | |  _| | | |/ _ \ | | | | __| | | | __| | | |
+  ~ | |_| | | | | | (_| |  __/ | | | |_| | | | |  __/ (_| | | |   | | |  __/ | |_| | |_| | | | |_| |_| |
+  ~  \___/|_| |_|_|\__,_|\___|_| |_|\__|_|_| |_|\___|\__,_| \_|   |_|_|\___|  \___/ \__|_|_|_|\__|\__, |
+  ~                                                                                                __/ |
+  ~                                                                                               |___/
+  ~  */
+  ~
+  -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="com.adamclmns.ufo.fx.controllers.EditMusicInfoForm"
+      prefHeight="400.0" prefWidth="600.0">
+    <HBox>
+        <Label text="Artist"/>
+        <TextField fx:id="artistField"/>
+    </HBox>
+    <HBox>
+        <Label text="Album"/>
+        <TextField fx:id="albumField"/>
+    </HBox>
+    <HBox>
+        <Label text="AlbumArist"/>
+        <TextField fx:id="albumArtistField"/>
+    </HBox>
+    <HBox>
+        <Label text="Track"/>
+        <TextField fx:id="trackField"/>
+    </HBox>
+    <HBox>
+        <Label text="Genre"/>
+        <TextField fx:id="genreField"/>
+    </HBox>
+    <HBox>
+        <Label text="Title"/>
+        <TextField fx:id="titleField"/>
+    </HBox>
+    <HBox>
+        <Label text="Rating"/>
+        <TextField fx:id="ratingField"/>
+    </HBox>
+    <HBox>
+        <Label text="Year"/>
+        <TextField fx:id="yearField"/>
+    </HBox>
+    <HBox>
+        <Button text="Cancel" fx:id="cancelButton"/>
+        <Button text="Okay" fx:id="okayButton"/>
+    </HBox>
+</VBox>
+

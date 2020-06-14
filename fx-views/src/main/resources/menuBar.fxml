@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!--
+  ~ /*
+  ~ ' _   _ ______ _   _
+  ~ | | | ||  ___| | | |                            Copyright -  AdamClmns 2020-03
+  ~ | | | || |_  | | | |
+  ~ | | | ||  _| | | | |
+  ~ | |_| || |_  | |_| |
+  ~  \___(_)_(_)  \___(_)
+  ~
+  ~
+  ~  _   _       _     _            _   _  __ _          _  ______ _ _        _   _ _   _ _ _ _
+  ~ | | | |     (_)   | |          | | (_)/ _(_)        | | |  ___(_) |      | | | | | (_) (_) |
+  ~ | | | |_ __  _  __| | ___ _ __ | |_ _| |_ _  ___  __| | | |_   _| | ___  | | | | |_ _| |_| |_ _   _
+  ~ | | | | '_ \| |/ _` |/ _ \ '_ \| __| |  _| |/ _ \/ _` | |  _| | | |/ _ \ | | | | __| | | | __| | | |
+  ~ | |_| | | | | | (_| |  __/ | | | |_| | | | |  __/ (_| | | |   | | |  __/ | |_| | |_| | | | |_| |_| |
+  ~  \___/|_| |_|_|\__,_|\___|_| |_|\__|_|_| |_|\___|\__,_| \_|   |_|_|\___|  \___/ \__|_|_|_|\__|\__, |
+  ~                                                                                                __/ |
+  ~                                                                                               |___/
+  ~  */
+  ~
+  -->
+
+<?import javafx.scene.control.*?>
+<MenuBar xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+         fx:controller="com.adamclmns.ufo.fx.controllers.MenuBar">
+    <Menu text="File">
+        <items>
+            <MenuItem onAction="#importSingleFile" text="Import File"/>
+            <MenuItem onAction="#importDirectoryRecursively" text="Import Folder"/>
+            <MenuItem text="Import Folder As..."/>
+            <MenuItem text="Rescan Library" onAction="#rescanLibraryFromDisk"/>
+            <MenuItem onAction="#quitUfu" text="Quit"/>
+        </items>
+    </Menu>
+    <Menu text="Edit">
+        <items>
+            <MenuItem text="Preferences"/>
+            <MenuItem text="Edit File Information"/>
+        </items>
+    </Menu>
+    <Menu text="Control">
+        <MenuItem text="Shuffle"/>
+        <MenuItem text="Repeat"/>
+        <MenuItem text="Next"/>
+        <MenuItem text="Previous"/>
+        <MenuItem text="Play"/>
+        <MenuItem text="Pause"/>
+    </Menu>
+    <Menu text="View">
+        <items>
+            <MenuItem text="Switch to Visualizer"/>
+            <MenuItem text="Music View"/>
+            <MenuItem text="ROM View"/>
+            <MenuItem text="Video View"/>
+            <MenuItem text="Doc View"/>
+        </items>
+    </Menu>
+    <Menu text="Tools">
+        <MenuItem text="IGDB Search for File info"/>
+        <MenuItem text="ID3 Missing Tag Info Search"/>
+        <MenuItem text="Scan for Duplicates"/>
+        <MenuItem text="Rescan Media Directories"/>
+        <MenuItem text="Add a Tool"/>
+    </Menu>
+    <Menu text="Help">
+        <items>
+            <MenuItem text="Documentation"/>
+            <MenuItem text="About"/>
+        </items>
+    </Menu>
+</MenuBar>
+

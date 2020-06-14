@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<!--
+  ~ /*
+  ~ ' _   _ ______ _   _
+  ~ | | | ||  ___| | | |                            Copyright -  AdamClmns 2020-03
+  ~ | | | || |_  | | | |
+  ~ | | | ||  _| | | | |
+  ~ | |_| || |_  | |_| |
+  ~  \___(_)_(_)  \___(_)
+  ~
+  ~
+  ~  _   _       _     _            _   _  __ _          _  ______ _ _        _   _ _   _ _ _ _
+  ~ | | | |     (_)   | |          | | (_)/ _(_)        | | |  ___(_) |      | | | | | (_) (_) |
+  ~ | | | |_ __  _  __| | ___ _ __ | |_ _| |_ _  ___  __| | | |_   _| | ___  | | | | |_ _| |_| |_ _   _
+  ~ | | | | '_ \| |/ _` |/ _ \ '_ \| __| |  _| |/ _ \/ _` | |  _| | | |/ _ \ | | | | __| | | | __| | | |
+  ~ | |_| | | | | | (_| |  __/ | | | |_| | | | |  __/ (_| | | |   | | |  __/ | |_| | |_| | | | |_| |_| |
+  ~  \___/|_| |_|_|\__,_|\___|_| |_|\__|_|_| |_|\___|\__,_| \_|   |_|_|\___|  \___/ \__|_|_|_|\__|\__, |
+  ~                                                                                                __/ |
+  ~                                                                                               |___/
+  ~  */
+  ~
+  -->
+
+<HBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="com.adamclmns.ufo.fx.controllers.MediaControls">
+
+    <Button id="reversePrevious" mnemonicParsing="false" onAction="#previous">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-skip-backward.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button id="play" mnemonicParsing="false" onAction="#playSelectedFile">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-playback-start.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button id="pause" mnemonicParsing="false" onAction="#pause">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-playback-pause.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button id="stop" onAction="#stop" mnemonicParsing="false">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-playback-stop.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+
+    <Button id="skipNext" mnemonicParsing="false" onAction="#skip">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-skip-forward.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+    <VBox prefWidth="400" minWidth="200" maxWidth="600" alignment="TOP_CENTER">
+        <Label fx:id="nowPlaying" text="Nothing Playing"/>
+        <Slider id="playProgress"/>
+    </VBox>
+    <ToggleButton id="shuffleToggle" mnemonicParsing="false">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-playlist-shuffle.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </ToggleButton>
+    <ToggleButton id="shuffleToggle" mnemonicParsing="false">
+        <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="images/mediaControls/Breezeicons-actions-22-media-playlist-repeat.svg.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </ToggleButton>
+</HBox>
+

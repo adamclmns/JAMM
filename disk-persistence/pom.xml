@@ -5,6 +5,10 @@
 
     <artifactId>disk-persistence</artifactId>
 
+    <description>
+        This library is intended to serve as the "persistence layer" for a
+        Desktop application, written to use as little external code as possible.
+    </description>
 
     <parent>
         <artifactId>jamm-root</artifactId>

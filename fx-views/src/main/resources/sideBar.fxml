@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<!--
+  ~ /*
+  ~ ' _   _ ______ _   _
+  ~ | | | ||  ___| | | |                            Copyright -  AdamClmns 2020-03
+  ~ | | | || |_  | | | |
+  ~ | | | ||  _| | | | |
+  ~ | |_| || |_  | |_| |
+  ~  \___(_)_(_)  \___(_)
+  ~
+  ~
+  ~  _   _       _     _            _   _  __ _          _  ______ _ _        _   _ _   _ _ _ _
+  ~ | | | |     (_)   | |          | | (_)/ _(_)        | | |  ___(_) |      | | | | | (_) (_) |
+  ~ | | | |_ __  _  __| | ___ _ __ | |_ _| |_ _  ___  __| | | |_   _| | ___  | | | | |_ _| |_| |_ _   _
+  ~ | | | | '_ \| |/ _` |/ _ \ '_ \| __| |  _| |/ _ \/ _` | |  _| | | |/ _ \ | | | | __| | | | __| | | |
+  ~ | |_| | | | | | (_| |  __/ | | | |_| | | | |  __/ (_| | | |   | | |  __/ | |_| | |_| | | | |_| |_| |
+  ~  \___/|_| |_|_|\__,_|\___|_| |_|\__|_|_| |_|\___|\__,_| \_|   |_|_|\___|  \___/ \__|_|_|_|\__|\__, |
+  ~                                                                                                __/ |
+  ~                                                                                               |___/
+  ~  */
+  ~
+  -->
+
+<ListView
+        xmlns:fx="http://javafx.com/fxml"
+        xmlns="http://javafx.com/javafx"
+        fx:controller="com.adamclmns.ufo.fx.controllers.SideBar"
+        fx:id="librarySelectionList" AnchorPane.bottomAnchor="0.0"
+        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+        AnchorPane.topAnchor="0.0">
+    <!-- TODO: Implement top-level Media Tree, Classification -> Appropriate Heirarchy (ROM Platform, Music Artist/Genre/Album/Playlists, Document Type/Category/AccessTime) -->
+    <Label fx:id="Music" text="Music"/>
+    <Label fx:id="Movies" text="Movies"/>
+    <Label fx:id="ROMs" text="ROMs"/>
+    <Label fx:id="Documents" text="Documents"/>
+</ListView>
+
