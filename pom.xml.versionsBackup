@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.adamclmns.jamm</groupId>
+    <artifactId>jamm-root</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <description>Just Another Media Manager</description>
+    <packaging>pom</packaging>
+
+
+    <name>jamm-root</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.adamclmns.com/JAMM</url>
+    <modules>
+        <module>disk-persistence</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.target>13</maven.compiler.target>
+        <maven.compiler.source>13</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit-jupiter.version>5.7.0-M1</junit-jupiter.version>
+        <jacoco.version>0.8.2</jacoco.version>
+        <guice.version>4.2.2</guice.version>
+        <tika-parsers.version>1.23</tika-parsers.version>
+        <javafx-fxml.version>15-ea+6</javafx-fxml.version>
+        <igdb-wrapper-java.version>2.0.0</igdb-wrapper-java.version>
+        <slf4j-jdk14.version>2.0.0-alpha1</slf4j-jdk14.version>
+        <ignite-guice.version>1.0.1</ignite-guice.version>
+        <jlayer.version>1.0.1</jlayer.version>
+        <guava.version>24.1.1-jre</guava.version>
+        <spring-boot-maven-plugin.version>2.3.1.RELEASE</spring-boot-maven-plugin.version>
+        <javafx-maven-plugin.version>0.0.4</javafx-maven-plugin.version>
+        <jid3lib.version>0.5</jid3lib.version>
+        <lombok.version>1.18.12</lombok.version>
+        <maven-surefire-report-plugin.version>3.0.0-M3</maven-surefire-report-plugin.version>
+        <maven-project-info-reports-plugin.version>2.6</maven-project-info-reports-plugin.version>
+        <maven-site-plugin.version>3.4</maven-site-plugin.version>
+        <doxia-module-markdown.version>1.6</doxia-module-markdown.version>
+        <wagon-gitsite.version>0.3.1</wagon-gitsite.version>
+        <maven-scm-provider-gitexe.version>1.4</maven-scm-provider-gitexe.version>
+        <maven-scm-manager-plexus.version>1.4</maven-scm-manager-plexus.version>
+        <javax.activation.version>1.1</javax.activation.version>
+    </properties>
+
+    <repositories>
+        <!-- For ID3 tag LIbrary -->
+        <repository>
+            <id>jaudiotagger-repository</id>
+            <url>https://dl.bintray.com/ijabz/maven</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Logging  using SLF4J because it's so wonderful -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>${slf4j-jdk14.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>3.3.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ufu-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ufu-fxApplication</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>filestorage</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Java FX Dependencies -->
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
+                <version>${javafx-fxml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-fxml</artifactId>
+                <version>${javafx-fxml.version}</version>
+            </dependency>
+            <!-- Music tag Support -->
+            <dependency>
+                <groupId>net.jthink</groupId>
+                <artifactId>jaudiotagger</artifactId>
+                <version>2.2.5</version>
+            </dependency>
+            <!-- MP3 Playback -->
+            <dependency>
+                <groupId>javazoom</groupId>
+                <artifactId>jlayer</artifactId>
+                <version>${jlayer.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                </plugin>
+                <!-- Make that jar executable -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot-maven-plugin.version}</version>
+                    <!-- FIXME Define ${start-class} -->
+                    <!--          <configuration>-->
+                    <!--            <mainClass>${start-class}</mainClass>-->
+                    <!--            <layout>ZIP</layout>-->
+                    <!--          </configuration>-->
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- This is nice for using for development, `mvn clean compile -e jafafx:run` -->
+                <plugin>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-maven-plugin</artifactId>
+                    <version>${javafx-maven-plugin.version}</version>
+                    <!-- FIXME Define ${start-class} -->
+                    <!--          <configuration>-->
+                    <!--            <mainClass>${start-class}</mainClass>-->
+                    <!--            <includePathExceptionsInClasspath>true</includePathExceptionsInClasspath>-->
+                    <!--          </configuration>-->
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>3.0.0-M3</version>
+                    <executions>
+                        <execution>
+                            <id>enforce-maven</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                                <rules>
+                                    <requireMavenVersion>
+                                        <version>3.6.1</version>
+                                    </requireMavenVersion>
+                                </rules>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.7</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependency-updates-report</report>
+                            <report>plugin-updates-report</report>
+                            <report>property-updates-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <!-- Surefire test reports -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven-surefire-report-plugin.version}</version>
+            </plugin>
+            <!-- Project info Reports-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven-project-info-reports-plugin.version}</version>
+            </plugin>
+            <!-- Include JavaDoc-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <!-- Exports JavaDocs to regular HTML files -->
+                        <id>javadoc-html</id>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </reportSet>
+                    <reportSet>
+                        <!-- Exports JavaDocs to regular HTML files -->
+                        <id>test-javadoc-html</id>
+                        <reports>
+                            <report>test-javadoc</report>
+                        </reports>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </reportSet>
+                    <reportSet>
+                        <!-- Generates the JavaDoc coverage report -->
+                        <id>javadoc-coverage</id>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <!-- Include Jacoco Report -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <reportSets>
+                    <reportSet>
+                        <inherited>true</inherited>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>
