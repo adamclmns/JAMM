@@ -24,7 +24,14 @@
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>
             <artifactId>fx-views</artifactId>
-            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.adamclmns.jamm</groupId>
+            <artifactId>core-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adamclmns.jamm</groupId>
+            <artifactId>core-api</artifactId>
         </dependency>
     </dependencies>
 

@@ -76,6 +76,17 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jdk14</artifactId>
             <version>${slf4j-jdk14.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-jdk14.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -229,6 +240,23 @@
                                     <requireMavenVersion>
                                         <version>3.6</version>
                                     </requireMavenVersion>
+                                    <banTransitiveDependencies>
+                                        <excludes>
+                                            <!--Not worried about test dependencies, and right now, holding off on figuring out JavaFX -->
+                                            <exclude>org.junit.jupiter:junit-jupiter</exclude>
+                                            <exclude>org.mockito:mockito-junit-jupiter</exclude>
+                                            <exclude>org.openjfx:*</exclude>
+                                        </excludes>
+                                    </banTransitiveDependencies>
+                                    <requireUpperBoundDeps>
+                                        <!-- 'uniqueVersions' (default:false) can be set to true if you want to compare the timestamped SNAPSHOTs  -->
+                                        <!-- <uniqueVersions>true</uniqueVersions> -->
+                                        <!-- If you wish to ignore certain cases:
+                                        <excludes>
+                                          <exclude>com.google.guava:guava</exclude>
+                                        </excludes>
+                                        -->
+                                    </requireUpperBoundDeps>
                                 </rules>
                             </configuration>
                         </execution>

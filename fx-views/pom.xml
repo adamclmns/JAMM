@@ -17,6 +17,12 @@
     </parent>
 
     <dependencies>
+        <!-- Don't depend on the Implementation Directly, EVER!!! -->
+        <dependency>
+            <groupId>com.adamclmns.jamm</groupId>
+            <artifactId>core-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <!-- Java FX Dependencies -->
         <dependency>
             <groupId>org.openjfx</groupId>

@@ -6,6 +6,9 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 
 public class Application extends javafx.application.Application {
+    // TODO: Configure Implementations of Interfaces here with Service Factory.
+    // TODO: Write ServiceFactory in CoreImpl
+    // TODO:
 
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(Application.class);
     private final Launcher launcher = new Launcher();

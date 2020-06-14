@@ -8,6 +8,13 @@
     <description>
         Core Functionality and Non-Framework code
     </description>
+    <dependencies>
+        <dependency>
+            <groupId>com.adamclmns.jamm</groupId>
+            <artifactId>core-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <parent>
         <artifactId>jamm-root</artifactId>
