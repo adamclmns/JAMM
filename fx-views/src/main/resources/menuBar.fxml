@@ -26,7 +26,7 @@
 <?import javafx.scene.control.*?>
 <MenuBar xmlns:fx="http://javafx.com/fxml"
          xmlns="http://javafx.com/javafx"
-         fx:controller="com.adamclmns.ufo.fx.controllers.MenuBar">
+         fx:controller="com.adamclmns.jamm.fx.views.controllers.MenuBar">
     <Menu text="File">
         <items>
             <MenuItem onAction="#importSingleFile" text="Import File"/>

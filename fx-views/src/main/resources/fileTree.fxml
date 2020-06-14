@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
-<!--
-  ~ /*
-  ~ ' _   _ ______ _   _
-  ~ | | | ||  ___| | | |                            Copyright -  AdamClmns 2020-03
-  ~ | | | || |_  | | | |
-  ~ | | | ||  _| | | | |
-  ~ | |_| || |_  | |_| |
-  ~  \___(_)_(_)  \___(_)
-  ~
-  ~
-  ~  _   _       _     _            _   _  __ _          _  ______ _ _        _   _ _   _ _ _ _
-  ~ | | | |     (_)   | |          | | (_)/ _(_)        | | |  ___(_) |      | | | | | (_) (_) |
-  ~ | | | |_ __  _  __| | ___ _ __ | |_ _| |_ _  ___  __| | | |_   _| | ___  | | | | |_ _| |_| |_ _   _
-  ~ | | | | '_ \| |/ _` |/ _ \ '_ \| __| |  _| |/ _ \/ _` | |  _| | | |/ _ \ | | | | __| | | | __| | | |
-  ~ | |_| | | | | | (_| |  __/ | | | |_| | | | |  __/ (_| | | |   | | |  __/ | |_| | |_| | | | |_| |_| |
-  ~  \___/|_| |_|_|\__,_|\___|_| |_|\__|_|_| |_|\___|\__,_| \_|   |_|_|\___|  \___/ \__|_|_|_|\__|\__, |
-  ~                                                                                                __/ |
-  ~                                                                                               |___/
-  ~  */
-  ~
-  -->
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             xmlns="http://javafx.com/javafx"
-            fx:controller="com.adamclmns.ufo.fx.controllers.FileTree"
+            fx:controller="com.adamclmns.jamm.fx.views.controllers.FileTree"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

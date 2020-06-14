@@ -16,6 +16,10 @@
         <relativePath>../</relativePath>
     </parent>
 
+    <properties>
+        <start-class>com.adamclmns.jamm.app.Application</start-class>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>
@@ -37,6 +41,33 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <!-- Make that jar executable -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-maven-plugin.version}</version>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- This is nice for using for development, `mvn clean compile -e jafafx:run` -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>${javafx-maven-plugin.version}</version>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <includePathExceptionsInClasspath>true</includePathExceptionsInClasspath>
+                </configuration>
             </plugin>
         </plugins>
     </build>

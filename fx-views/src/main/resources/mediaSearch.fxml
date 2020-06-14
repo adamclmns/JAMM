@@ -27,7 +27,7 @@
 
 <HBox xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
-      fx:controller="com.adamclmns.ufo.fx.controllers.MediaSearch"
+      fx:controller="com.adamclmns.jamm.fx.views.controllers.MediaSearch"
       alignment="CENTER">
     <HBox alignment="CENTER_RIGHT" minWidth="300" maxWidth="600">
         <Label text="Search"/>

@@ -28,9 +28,9 @@
 
 <HBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
       xmlns="http://javafx.com/javafx"
-      fx:controller="com.adamclmns.ufo.fx.controllers.MediaControls">
+      fx:controller="com.adamclmns.jamm.fx.views.controllers.MediaControls">
 
-    <Button id="reversePrevious" mnemonicParsing="false" onAction="#previous">
+    <Button id="reversePrevious" mnemonicParsing="false" ><!--onAction="#previous"-->
         <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                 <image>
@@ -48,7 +48,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button id="pause" mnemonicParsing="false" onAction="#pause">
+    <Button id="pause" mnemonicParsing="false" ><!-- onAction="#pause"-->
         <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                 <image>
@@ -57,7 +57,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button id="stop" onAction="#stop" mnemonicParsing="false">
+    <Button id="stop" mnemonicParsing="false"><!-- onAction="#stop" -->
         <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                 <image>
@@ -67,7 +67,7 @@
         </graphic>
     </Button>
 
-    <Button id="skipNext" mnemonicParsing="false" onAction="#skip">
+    <Button id="skipNext" mnemonicParsing="false" ><!--onAction="#skip"-->
         <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                 <image>

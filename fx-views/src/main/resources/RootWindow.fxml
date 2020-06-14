@@ -26,7 +26,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.*?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-      fx:controller="com.adamclmns.ufo.fx.controllers.RootWindow" fx:id="rootWindow">
+      fx:controller="com.adamclmns.jamm.fx.views.controllers.RootWindow" fx:id="rootWindow">
     <fx:include source="menuBar.fxml" fx:id="menuBar"/>
     <HBox maxHeight="100" alignment="CENTER">
         <fx:include source="mediaControls.fxml" fx:id="mediaControls"/>

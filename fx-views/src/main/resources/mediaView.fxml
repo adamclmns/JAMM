@@ -26,7 +26,7 @@
 <TableView
         xmlns:fx="http://javafx.com/fxml"
         xmlns="http://javafx.com/javafx"
-        fx:controller="com.adamclmns.ufo.fx.controllers.MediaView"
+        fx:controller="com.adamclmns.jamm.fx.views.controllers.MediaView"
         fx:id="mediaViewTable" cache="true"
         tableMenuButtonVisible="true">
     <columns>

@@ -28,7 +28,7 @@
 <ListView
         xmlns:fx="http://javafx.com/fxml"
         xmlns="http://javafx.com/javafx"
-        fx:controller="com.adamclmns.ufo.fx.controllers.SideBar"
+        fx:controller="com.adamclmns.jamm.fx.views.controllers.SideBar"
         fx:id="librarySelectionList" AnchorPane.bottomAnchor="0.0"
         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
         AnchorPane.topAnchor="0.0">
