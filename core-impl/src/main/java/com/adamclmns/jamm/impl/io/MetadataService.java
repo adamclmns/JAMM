@@ -4,9 +4,9 @@ import com.adamclmns.jamm.api.io.IFileInfo;
 import com.adamclmns.jamm.api.io.IMetadataService;
 import com.adamclmns.jamm.api.io.IMusicInfo;
 
-import java.nio.file.Path;
-import java.util.UUID;
-
+/**
+ * The type Metadata service.
+ */
 public class MetadataService implements IMetadataService {
 
 

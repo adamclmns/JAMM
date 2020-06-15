@@ -1,31 +1,70 @@
-package com.adamclmns.diskpersistence.filestorage.simple;
+package com.adamclmns.diskpersistence.filestorage.crypto;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 /**
- * The type My random pojo.
+ * The type My random crypted pojo.
  */
-public class MyRandomPojo implements Serializable {
+public class MyRandomCryptedPojo extends CryptedObject implements Serializable {
     private String a;
     private int b;
     private List<String> c;
     private Map<Integer, String> d;
 
     /**
-     * Instantiates a new My random pojo.
+     * Instantiates a new My random crypted pojo.
+     *
+     * @param bytes the bytes
+     */
+    public MyRandomCryptedPojo(byte[] bytes) {
+        super(bytes);
+    }
+
+    /**
+     * Instantiates a new My random crypted pojo.
+     */
+    public MyRandomCryptedPojo() {
+        super(null);
+    }
+
+    /**
+     * Instantiates a new My random crypted pojo.
      *
      * @param a the a
      * @param b the b
      * @param c the c
      * @param d the d
      */
-    public MyRandomPojo(String a, int b, List<String> c, Map<Integer, String> d) {
+    public MyRandomCryptedPojo(String a, int b, List<String> c, Map<Integer, String> d) {
+        super(null);
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyRandomCryptedPojo that = (MyRandomCryptedPojo) o;
+
+        if (getB() != that.getB()) return false;
+        if (!getA().equals(that.getA())) return false;
+        if (!getC().equals(that.getC())) return false;
+        return getD().equals(that.getD());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getA().hashCode();
+        result = 31 * result + getB();
+        result = 31 * result + getC().hashCode();
+        result = 31 * result + getD().hashCode();
+        return result;
     }
 
     /**

@@ -7,20 +7,34 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
+/**
+ * The type Property configuration.
+ */
 public class PropertyConfiguration {
 
     private static Logger log = LoggerFactory.getLogger(PropertyConfiguration.class);
     private final Properties cachedSystemConfig;
 
+    /**
+     * Instantiates a new Property configuration.
+     *
+     * @throws IOException the io exception
+     */
     public PropertyConfiguration() throws IOException {
         this.cachedSystemConfig = new Properties();
         readDefaultProperties().forEach(this.cachedSystemConfig::put);
         System.getenv().forEach(this.cachedSystemConfig::put);
     }
 
+    /**
+     * Instantiates a new Property configuration.
+     *
+     * @param path the path
+     * @throws IOException the io exception
+     */
     public PropertyConfiguration(String... path) throws IOException {
         this();
-        for(String p : path){
+        for (String p : path) {
             this.cachedSystemConfig.load(
                     Objects.requireNonNull(
                             getClass().getClassLoader().getResourceAsStream(p)));

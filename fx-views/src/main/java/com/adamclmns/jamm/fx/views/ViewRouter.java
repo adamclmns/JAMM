@@ -4,7 +4,13 @@ import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
+/**
+ * The enum View router.
+ */
 public enum ViewRouter {
+    /**
+     * Main view router.
+     */
     MAIN();
 
     private final String name;
@@ -13,6 +19,12 @@ public enum ViewRouter {
         this.name = "RootWindow.fxml";
     }
 
+    /**
+     * Load node t.
+     *
+     * @param <T> the type parameter
+     * @return the t
+     */
     public <T> T loadNode() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(ViewRouter.MAIN.toString()));

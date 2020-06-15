@@ -6,7 +6,13 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
+/**
+ * The type Launcher.
+ */
 public class Launcher extends Application {
+    /**
+     * The constant TITLE_BAR.
+     */
     public static final String TITLE_BAR = "JAMM - Just Another Media Manager";
 
     private void loadRootUI(Stage stage) {

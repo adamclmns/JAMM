@@ -9,6 +9,9 @@ import org.slf4j.Logger;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The type Root window.
+ */
 @SuppressWarnings("EmptyMethod")
 public class RootWindow implements Initializable {
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(RootWindow.class);
@@ -32,6 +35,9 @@ public class RootWindow implements Initializable {
     private MediaControls mediaControlsController;
 
 
+    /**
+     * Instantiates a new Root window.
+     */
     public RootWindow() {
 
     }

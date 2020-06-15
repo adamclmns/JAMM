@@ -6,12 +6,20 @@ import com.adamclmns.jamm.api.players.IMusicPlayer;
 
 import java.nio.file.Path;
 
+/**
+ * The type Music info.
+ */
 public class MusicInfo implements IMusicInfo {
 
     private final Object FileInfoStore = null; // TODO: ? Type?
     private final Path path;
 
-    MusicInfo(final Path path){
+    /**
+     * Instantiates a new Music info.
+     *
+     * @param path the path
+     */
+    MusicInfo(final Path path) {
         this.path = path;
     }
 
@@ -59,7 +67,6 @@ public class MusicInfo implements IMusicInfo {
     public IMusicPlayer getPlayer() {
         return null;
     }
-
 
 
 }

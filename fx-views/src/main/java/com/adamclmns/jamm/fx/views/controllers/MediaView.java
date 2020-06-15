@@ -10,6 +10,9 @@ import org.slf4j.LoggerFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The type Media view.
+ */
 public class MediaView implements Initializable {
 
     private static final Logger log = LoggerFactory.getLogger(MediaView.class);
@@ -17,11 +20,19 @@ public class MediaView implements Initializable {
     private ContextMenu mediaViewContextMenu;
 
 
+    /**
+     * Instantiates a new Media view.
+     */
     public MediaView() {
         this.mediaViewContextMenu = buildMediaItemRightClickMenu();
     }
 
 
+    /**
+     * Build media item right click menu context menu.
+     *
+     * @return the context menu
+     */
     public ContextMenu buildMediaItemRightClickMenu() {
         ContextMenu contextMenu = new ContextMenu();
         // TODO: Does the Context menu apply to one or more items?

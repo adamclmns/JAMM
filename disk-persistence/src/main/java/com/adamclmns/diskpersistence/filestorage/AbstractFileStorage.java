@@ -8,16 +8,35 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Abstract file storage.
+ *
+ * @param <K> the type parameter
+ * @param <V> the type parameter
+ */
 public abstract class AbstractFileStorage<K, V> implements IFileStorage<K, V> {
     private final File storageFile;
     private boolean autosave;
     private HashMap<K, V> storageMap;
 
+    /**
+     * Instantiates a new Abstract file storage.
+     *
+     * @param filepath the filepath
+     * @param autosave the autosave
+     * @throws IOException the io exception
+     */
     protected AbstractFileStorage(String filepath, boolean autosave) throws IOException {
         this(filepath);
         this.autosave = autosave;
     }
 
+    /**
+     * Instantiates a new Abstract file storage.
+     *
+     * @param filepath the filepath
+     * @throws IOException the io exception
+     */
     protected AbstractFileStorage(String filepath) throws IOException {
         this.storageFile = new File(filepath);
 
@@ -80,6 +99,9 @@ public abstract class AbstractFileStorage<K, V> implements IFileStorage<K, V> {
         oos.close();
     }
 
+    /**
+     * Load.
+     */
     @SuppressWarnings("unchecked")
     void load() {
         try {

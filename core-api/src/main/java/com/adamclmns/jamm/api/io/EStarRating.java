@@ -1,7 +1,33 @@
 package com.adamclmns.jamm.api.io;
 
+/**
+ * The enum E star rating.
+ */
 public enum EStarRating {
-    NULL(0),ONE(1),TWO(2),THREE(3),FOUR(4),FIVE(5);
+    /**
+     * Null e star rating.
+     */
+    NULL(0),
+    /**
+     * One e star rating.
+     */
+    ONE(1),
+    /**
+     * Two e star rating.
+     */
+    TWO(2),
+    /**
+     * Three e star rating.
+     */
+    THREE(3),
+    /**
+     * Four e star rating.
+     */
+    FOUR(4),
+    /**
+     * Five e star rating.
+     */
+    FIVE(5);
 
     private int rating = 0;
 

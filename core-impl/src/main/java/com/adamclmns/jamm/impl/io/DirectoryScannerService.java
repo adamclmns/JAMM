@@ -5,6 +5,9 @@ import com.adamclmns.jamm.api.scanning.IDirectoryScannerService;
 import java.nio.file.Path;
 import java.util.Collection;
 
+/**
+ * The type Directory scanner service.
+ */
 public class DirectoryScannerService implements IDirectoryScannerService {
 
     @Override

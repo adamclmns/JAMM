@@ -1,15 +1,29 @@
 package com.adamclmns.diskpersistence.filestorage.crypto;
 
+import com.adamclmns.diskpersistence.exception.DecryptionFailedException;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
 
+/**
+ * The type Crypter.
+ *
+ * @param <O> the type parameter
+ */
 public class Crypter<O> {
 
     private static final String ALGO = "AES";
 
+    /**
+     * Encrypt crypted object.
+     *
+     * @param o        the o
+     * @param password the password
+     * @return the crypted object
+     */
     public CryptedObject encrypt(O o, String password) {
         try {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -22,6 +36,15 @@ public class Crypter<O> {
         }
     }
 
+    /**
+     * Decrypt o.
+     *
+     * @param <O>      the type parameter
+     * @param co       the co
+     * @param password the password
+     * @return the o
+     * @throws DecryptionFailedException the decryption failed exception
+     */
     public <O> O decrypt(CryptedObject co, String password) throws DecryptionFailedException {
         try {
             ByteArrayInputStream bis = new ByteArrayInputStream(decrypt(co.getBytes(), password));
@@ -32,6 +55,14 @@ public class Crypter<O> {
         }
     }
 
+    /**
+     * Encrypt byte [ ].
+     *
+     * @param data   the data
+     * @param rawKey the raw key
+     * @return the byte [ ]
+     * @throws Exception the exception
+     */
     public byte[] encrypt(byte[] data, String rawKey) throws Exception {
         Key key = generateKey(rawKey);
         Cipher c = Cipher.getInstance(ALGO);
@@ -39,6 +70,14 @@ public class Crypter<O> {
         return c.doFinal(data);
     }
 
+    /**
+     * Decrypt byte [ ].
+     *
+     * @param encryptedData the encrypted data
+     * @param rawKey        the raw key
+     * @return the byte [ ]
+     * @throws Exception the exception
+     */
     public byte[] decrypt(byte[] encryptedData, String rawKey) throws Exception {
         Key key = generateKey(rawKey);
         Cipher c = Cipher.getInstance(ALGO);
@@ -57,13 +96,5 @@ public class Crypter<O> {
         return new SecretKeySpec(keyValue, ALGO);
     }
 
-    public static class DecryptionFailedException extends Exception {
 
-        private static final long serialVersionUID = 5911192741823907010L;
-
-        @Override
-        public String getMessage() {
-            return "Decryption failed. Is the password correct?";
-        }
-    }
 }

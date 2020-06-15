@@ -11,10 +11,18 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
+/**
+ * The type Menu bar.
+ */
 public class MenuBar {
     private static final Logger log = LoggerFactory.getLogger(MenuBar.class);
     private DirectoryImportCallback directoryImportCallback;
 
+    /**
+     * Sets directory import callback.
+     *
+     * @param callback the callback
+     */
     void setDirectoryImportCallback(DirectoryImportCallback callback) {
         directoryImportCallback = callback;
     }
@@ -43,11 +51,20 @@ public class MenuBar {
         Platform.exit();
     }
 
+    /**
+     * Rescan library from disk.
+     */
     public void rescanLibraryFromDisk() {
 
     }
 
+    /**
+     * The interface Directory import callback.
+     */
     public interface DirectoryImportCallback {
+        /**
+         * Execute.
+         */
         void execute();
     }
 }

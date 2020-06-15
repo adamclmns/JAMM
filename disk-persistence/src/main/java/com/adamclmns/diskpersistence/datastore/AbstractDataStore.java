@@ -21,10 +21,19 @@ import java.util.Map;
 @SuppressWarnings("unchecked") // TODO: Figure out how to fix these for real.
 public abstract class AbstractDataStore<K, V extends AbstractStoredObject<K>> {
 
+    /**
+     * The constant HOME_DIR.
+     */
     protected static final String HOME_DIR = System.getProperty("user.home");
+    /**
+     * The constant UFU_HOME.
+     */
     protected static final String UFU_HOME = ".ufu";
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(AbstractDataStore.class);
 
+    /**
+     * The Store file path.
+     */
     protected final Path storeFilePath;
 
     private final IFileStorage<K, V> store;
