@@ -51,10 +51,11 @@ class GenericFileStorageTest {
     void setUp() throws IOException {
         deleteTestFile();
 
-        fileStorage = new GenericFileStorage<String, MyRandomPojo>(TEST_FILE_STORAGE, true);
+        fileStorage = new GenericFileStorage<String, MyRandomPojo>(TEST_FILE_STORAGE, false);
         fileStorage.store(key0, value0);
         fileStorage.store(key1, value1);
         fileStorage.store(key2, value2);
+        fileStorage.save();
     }
 
     private void deleteTestFile() {
@@ -74,6 +75,21 @@ class GenericFileStorageTest {
         MyRandomPojo m = fileStorage.get(key2);
         assertEquals(m, value2);
 
+    }
+
+    /**
+     * Load.
+     */
+    @Test
+    void load() throws IOException {
+        GenericFileStorage gfs = new GenericFileStorage<String, MyRandomPojo>(TEST_FILE_STORAGE, false);
+        Map<String, MyRandomPojo> mMap = gfs.getAll();
+        assertTrue(mMap.containsKey(key0));
+        assertTrue(mMap.containsKey(key1));
+        assertTrue(mMap.containsKey(key2));
+        assertTrue(mMap.containsValue(value0));
+        assertTrue(mMap.containsValue(value1));
+        assertTrue(mMap.containsValue(value2));
     }
 
     /**
@@ -168,5 +184,8 @@ class GenericFileStorageTest {
         assertTrue(mMap.containsValue(value2));
     }
 
-
+    @Test
+    public void toStringTest() {
+        String actual = fileStorage.toString();
+    }
 }

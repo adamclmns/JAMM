@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * The type Encrypted generic file storage test.
  */
-class EncryptedGenericFileStorageTest {
+public class EncryptedGenericFileStorageTest {
 
     /**
      * The constant TEST_FILE_STORAGE.
@@ -40,7 +40,7 @@ class EncryptedGenericFileStorageTest {
      * @throws IOException the io exception
      */
     @AfterEach
-    void tearDown() throws IOException {
+    public void tearDown() throws IOException {
         deleteTestFile();
     }
 
@@ -50,7 +50,7 @@ class EncryptedGenericFileStorageTest {
      * @throws IOException the io exception
      */
     @BeforeEach
-    void setUp() throws IOException {
+    public void setUp() throws IOException {
         deleteTestFile();
 
         fileStorage = new EncryptedGenericFileStorage<String, MyRandomCryptedPojo>(TEST_FILE_STORAGE, true);
@@ -72,7 +72,7 @@ class EncryptedGenericFileStorageTest {
      * Get.
      */
     @Test
-    void get() {
+    public void get() {
         MyRandomCryptedPojo m = (MyRandomCryptedPojo) fileStorage.get(key2);
         assertEquals(m, value2);
 
@@ -82,7 +82,7 @@ class EncryptedGenericFileStorageTest {
      * Gets all as array list.
      */
     @Test
-    void getAllAsArrayList() {
+    public void getAllAsArrayList() {
         List<CryptedObject> mArr = fileStorage.getAllAsArrayList();
         assertEquals(3, mArr.size());
     }
@@ -91,7 +91,7 @@ class EncryptedGenericFileStorageTest {
      * Has object.
      */
     @Test
-    void hasObject() {
+    public void hasObject() {
         assertTrue(fileStorage.hasObject(value0));
     }
 
@@ -99,7 +99,7 @@ class EncryptedGenericFileStorageTest {
      * Gets size.
      */
     @Test
-    void getSize() {
+    public void getSize() {
         assertEquals(3, fileStorage.getSize());
     }
 
@@ -107,7 +107,7 @@ class EncryptedGenericFileStorageTest {
      * Has key.
      */
     @Test
-    void hasKey() {
+    public void hasKey() {
         assertTrue(fileStorage.hasKey(key2));
         assertFalse(fileStorage.hasKey("SOME JUNK"));
     }
@@ -116,7 +116,7 @@ class EncryptedGenericFileStorageTest {
      * Gets all.
      */
     @Test
-    void getAll() {
+    public void getAll() {
         Map<String, CryptedObject> storage = fileStorage.getAll();
 
         List<Map.Entry<String, MyRandomCryptedPojo>> entries = storage.entrySet().stream().map(e ->
@@ -139,7 +139,7 @@ class EncryptedGenericFileStorageTest {
      * @throws IOException the io exception
      */
     @Test
-    void remove() throws IOException {
+    public void remove() throws IOException {
         fileStorage.remove(key0);
         Map<String, CryptedObject> storage = fileStorage.getAll();
 
@@ -165,7 +165,7 @@ class EncryptedGenericFileStorageTest {
      * @throws IOException the io exception
      */
     @Test
-    void storeAll() throws IOException {
+    public void storeAll() throws IOException {
         fileStorage.remove(key0);
         fileStorage.remove(key1);
         fileStorage.remove(key2);
@@ -199,5 +199,10 @@ class EncryptedGenericFileStorageTest {
         assertTrue(finalMMap.containsValue(value0));
         assertTrue(finalMMap.containsValue(value1));
         assertTrue(finalMMap.containsValue(value2));
+    }
+
+    @Test
+    public void toStringTest() {
+        fileStorage.toString();
     }
 }

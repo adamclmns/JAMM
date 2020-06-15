@@ -1,31 +1,60 @@
-package com.adamclmns.diskpersistence.filestorage.simple;
+package com.adamclmns.diskpersistence.datastore;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 /**
- * The type My random pojo.
+ * The type My random stored pojo.
  */
-public class MyRandomPojo implements Serializable {
+public class MyRandomStoredPojo extends AbstractStoredObject<String> implements Serializable {
     private String a;
     private int b;
     private List<String> c;
     private Map<Integer, String> d;
 
+
     /**
-     * Instantiates a new My random pojo.
+     * Instantiates a new My random stored pojo.
+     */
+
+
+    /**
+     * Instantiates a new My random stored pojo.
      *
      * @param a the a
      * @param b the b
      * @param c the c
      * @param d the d
      */
-    public MyRandomPojo(String a, int b, List<String> c, Map<Integer, String> d) {
+    public MyRandomStoredPojo(String a, int b, List<String> c, Map<Integer, String> d) {
+        super(a);
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        com.adamclmns.diskpersistence.filestorage.crypto.MyRandomCryptedPojo that = (com.adamclmns.diskpersistence.filestorage.crypto.MyRandomCryptedPojo) o;
+
+        if (getB() != that.getB()) return false;
+        if (!getA().equals(that.getA())) return false;
+        if (!getC().equals(that.getC())) return false;
+        return getD().equals(that.getD());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getA().hashCode();
+        result = 31 * result + getB();
+        result = 31 * result + getC().hashCode();
+        result = 31 * result + getD().hashCode();
+        return result;
     }
 
     /**
@@ -99,36 +128,5 @@ public class MyRandomPojo implements Serializable {
     public void setD(Map<Integer, String> d) {
         this.d = d;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        MyRandomPojo that = (MyRandomPojo) o;
-
-        if (getB() != that.getB()) return false;
-        if (!getA().equals(that.getA())) return false;
-        if (!getC().equals(that.getC())) return false;
-        return getD().equals(that.getD());
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getA().hashCode();
-        result = 31 * result + getB();
-        result = 31 * result + getC().hashCode();
-        result = 31 * result + getD().hashCode();
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "MyRandomPojo{" +
-                "a='" + a + '\'' +
-                ", b=" + b +
-                ", c=" + c +
-                ", d=" + d +
-                '}';
-    }
 }
+
