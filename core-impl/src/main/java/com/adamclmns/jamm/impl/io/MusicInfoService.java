@@ -1,6 +1,6 @@
 package com.adamclmns.jamm.impl.io;
 
-import com.adamclmns.jamm.api.io.EStarRating;
+import com.adamclmns.jamm.models.EStarRating;
 import com.adamclmns.jamm.api.io.IMusicInfoService;
 import com.adamclmns.jamm.api.players.IMusicPlayerService;
 

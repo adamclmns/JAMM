@@ -10,60 +10,6 @@
         fx:id="mediaViewTable" cache="true"
         tableMenuButtonVisible="true">
     <columns>
-        <TableColumn fx:id="id" text="Id"/>
-        <TableColumn fx:id="fileName" text="Name"/>
-        <TableColumn fx:id="location" text="Location"/>
-        <TableColumn fx:id="category" text="category"/>
-
-        <TableColumn fx:id="rom_title" text="rom_title"/>
-        <TableColumn fx:id="rom_publisher" text="rom_publisher"/>
-        <TableColumn fx:id="rom_developer" text="rom_developer"/>
-        <TableColumn fx:id="rom_releaseYear" text="rom_releaseYear"/>
-        <TableColumn fx:id="rom_userRating" text="rom_userRating"/>
-        <TableColumn fx:id="rom_playabilityRating"
-                     text="rom_playabilityRating"/>
-        <TableColumn fx:id="rom_platform" text="rom_platform"/>
-        <TableColumn fx:id="rom_format" text="rom_format"/>
-        <TableColumn fx:id="rom_preferredEmulator"
-                     text="rom_preferredEmulator"/>
-        <TableColumn fx:id="rom_preferredOptions"
-                     text="rom_preferredOptions"/>
-
-        <TableColumn fx:id="music_artist" text="music_artist"/>
-        <TableColumn fx:id="music_album" text="music_album"/>
-        <TableColumn fx:id="music_albumArtist"
-                     text="music_albumArtist"/>
-        <TableColumn fx:id="music_genre" text="music_genre"/>
-        <TableColumn fx:id="music_title" text="music_title"/>
-        <TableColumn fx:id="music_trackNo" text="music_trackNo"/>
-        <TableColumn fx:id="music_releaseYear"
-                     text="music_releaseYear"/>
-        <TableColumn fx:id="music_playCount" text="music_playCount"/>
-        <TableColumn fx:id="music_userRating" text="music_userRating"/>
-        <TableColumn fx:id="music_lastPlayed" text="music_lastPlayed"/>
-        <TableColumn fx:id="music_allowedShufflePlay"
-                     text="music_allowedShufflePlay"/>
-
-        <TableColumn fx:id="video_title" text="video_title"/>
-        <TableColumn fx:id="video_releaseYear"
-                     text="video_releaseYear"/>
-        <TableColumn fx:id="video_language" text="video_language"/>
-        <TableColumn fx:id="video_subtitles" text="video_subtitles"/>
-        <TableColumn fx:id="video_subtitlesLanguage"
-                     text="video_subtitlesLanguage"/>
-        <TableColumn fx:id="video_format" text="video_format"/>
-        <TableColumn fx:id="video_resolution" text="video_resolution"/>
-
-
-        <TableColumn fx:id="doc_title" text="doc_title"/>
-        <TableColumn fx:id="doc_author" text="doc_author"/>
-        <TableColumn fx:id="doc_format" text="doc_format"/>
-        <TableColumn fx:id="doc_lastModifiedBy"
-                     text="doc_lastModifiedBy"/>
-        <TableColumn fx:id="doc_lastModifiedDate"
-                     text="doc_lastModifiedDate"/>
-        <TableColumn fx:id="doc_writeProtected"
-                     text="doc_writeProtected"/>
 
     </columns>
 </TableView>

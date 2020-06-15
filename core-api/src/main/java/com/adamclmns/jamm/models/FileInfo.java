@@ -3,7 +3,7 @@ package com.adamclmns.jamm.models;
 import com.adamclmns.diskpersistence.datastore.AbstractStoredObject;
 
 import java.nio.file.Path;
-
+// TODO: Refactor this to it's own module ("data?" "models?")
 public class FileInfo extends AbstractStoredObject<Path> {
     private final String name;
     private final String type;

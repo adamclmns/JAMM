@@ -1,7 +1,5 @@
 package com.adamclmns.jamm.models;
 
-import com.adamclmns.jamm.api.io.EStarRating;
-
 public class MusicInfo {
     private final String artist;
     private final String title;

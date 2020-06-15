@@ -19,6 +19,7 @@
         <module>core-api</module>
         <module>core-impl</module>
         <module>application</module>
+        <module>models</module>
     </modules>
 
     <properties>
@@ -60,6 +61,7 @@
         <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+        <findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
     </properties>
 
     <repositories>
@@ -122,6 +124,11 @@
             <dependency>
                 <groupId>com.adamclmns.jamm</groupId>
                 <artifactId>core-impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.adamclmns.jamm</groupId>
+                <artifactId>core-models</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- Java FX Dependencies -->

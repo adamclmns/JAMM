@@ -7,10 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fx-views" />
-        <module name="core-impl" />
+        <module name="core-api" />
+        <module name="core-models" />
         <module name="disk-persistence" />
         <module name="application" />
-        <module name="core-api" />
+        <module name="core-impl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
