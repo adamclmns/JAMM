@@ -2,6 +2,7 @@ package com.adamclmns.jamm.impl.io;
 
 import com.adamclmns.jamm.api.io.EStarRating;
 import com.adamclmns.jamm.api.io.IMusicInfoService;
+import com.adamclmns.jamm.api.players.IMusicPlayerService;
 
 import java.nio.file.Path;
 
@@ -51,6 +52,11 @@ public class MusicInfoService implements IMusicInfoService {
 
     @Override
     public EStarRating getRating() {
+        return null;
+    }
+
+    @Override
+    public IMusicPlayerService getPlayer() {
         return null;
     }
 }

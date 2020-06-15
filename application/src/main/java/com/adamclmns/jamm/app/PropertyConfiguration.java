@@ -7,18 +7,18 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
-public class ConfigurationManager {
+public class PropertyConfiguration {
 
-    private static Logger log = LoggerFactory.getLogger(ConfigurationManager.class);
+    private static Logger log = LoggerFactory.getLogger(PropertyConfiguration.class);
     private final Properties cachedSystemConfig;
 
-    public ConfigurationManager() throws IOException {
+    public PropertyConfiguration() throws IOException {
         this.cachedSystemConfig = new Properties();
         readDefaultProperties().forEach(this.cachedSystemConfig::put);
         System.getenv().forEach(this.cachedSystemConfig::put);
     }
 
-    public ConfigurationManager(String... path) throws IOException {
+    public PropertyConfiguration(String... path) throws IOException {
         this();
         for(String p : path){
             this.cachedSystemConfig.load(
