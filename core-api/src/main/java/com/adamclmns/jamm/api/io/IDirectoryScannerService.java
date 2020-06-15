@@ -35,8 +35,8 @@ public interface IDirectoryScannerService {
      */
     public boolean verifyDirectory(Path directory, Collection<Path> knownPaths);
 
-    public Collection<UUID> importDirectoryRecursively(Path directory);
+    public Collection<Path> importDirectoryRecursively(Path directory);
 
-    public UUID importFile(Path file);
+    public Path importFile(Path file);
 
 }

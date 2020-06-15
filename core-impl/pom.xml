@@ -14,6 +14,11 @@
             <artifactId>core-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.adamclmns.jamm</groupId>
+            <artifactId>disk-persistence</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <parent>

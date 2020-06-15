@@ -33,6 +33,10 @@
             <groupId>com.adamclmns.jamm</groupId>
             <artifactId>core-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.adamclmns.jamm</groupId>
+            <artifactId>disk-persistence</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

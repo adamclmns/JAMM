@@ -21,18 +21,17 @@ public class AbstractStoredObject<T> implements Serializable {
     }
 
 
-    public abstract static class AbstractStoredObjectBuilder<B> {
-        protected UUID id;
-        protected String filePath;
+    public abstract static class AbstractStoredObjectBuilder<T> {
+        protected T id;
 
         public AbstractStoredObjectBuilder() {
         }
 
-        public AbstractStoredObjectBuilder id(UUID id) {
+        public AbstractStoredObjectBuilder<T> id(T id) {
             this.id = id;
             return this;
         }
 
-        public abstract B build();
+        public abstract AbstractStoredObject<T> build();
     }
 }

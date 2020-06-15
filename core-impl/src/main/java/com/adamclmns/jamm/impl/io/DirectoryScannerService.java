@@ -4,9 +4,9 @@ import com.adamclmns.jamm.api.io.IDirectoryScannerService;
 
 import java.nio.file.Path;
 import java.util.Collection;
-import java.util.UUID;
 
 public class DirectoryScannerService implements IDirectoryScannerService {
+
     @Override
     public Collection<Path> scanDirectory(Path directory) {
         return null;
@@ -23,12 +23,12 @@ public class DirectoryScannerService implements IDirectoryScannerService {
     }
 
     @Override
-    public Collection<UUID> importDirectoryRecursively(Path directory) {
+    public Collection<Path> importDirectoryRecursively(Path directory) {
         return null;
     }
 
     @Override
-    public UUID importFile(Path file) {
+    public Path importFile(Path file) {
         return null;
     }
 }
