@@ -8,15 +8,23 @@ import java.util.Objects;
 import java.util.Properties;
 
 public class ConfigurationManager {
-    private static final String IGDB_API_KEY_PROPERTY = "IGDB_USER_KEY";
-    private static final String IGDB_BASE_PATH = "igdb.base-url";
+
     private static Logger log = LoggerFactory.getLogger(ConfigurationManager.class);
-    private final Properties CachedSystemConfig;
+    private final Properties cachedSystemConfig;
 
     public ConfigurationManager() throws IOException {
-        this.CachedSystemConfig = new Properties();
-        readDefaultProperties().forEach(this.CachedSystemConfig::put);
-        System.getenv().forEach(this.CachedSystemConfig::put);
+        this.cachedSystemConfig = new Properties();
+        readDefaultProperties().forEach(this.cachedSystemConfig::put);
+        System.getenv().forEach(this.cachedSystemConfig::put);
+    }
+
+    public ConfigurationManager(String... path) throws IOException {
+        this();
+        for(String p : path){
+            this.cachedSystemConfig.load(
+                    Objects.requireNonNull(
+                            getClass().getClassLoader().getResourceAsStream(p)));
+        }
     }
 
     private Properties readDefaultProperties() throws IOException {
@@ -25,20 +33,14 @@ public class ConfigurationManager {
                 Objects.requireNonNull(
                         getClass().getClassLoader().getResourceAsStream("application.properties")));
         props.forEach((k, v) -> {
-            log.info("PROPERTY [{}] WITH VALUE [{}]", k, v);
+            log.debug("PROPERTY [{}] WITH VALUE [{}]", k, v);
         });
         return props;
     }
 
     private Object getPropertyByName(String propertyName) {
-        return this.CachedSystemConfig.get(propertyName);
+        return this.cachedSystemConfig.get(propertyName);
     }
 
-    public String getIgdbApiKey() {
-        return String.valueOf(getPropertyByName(IGDB_API_KEY_PROPERTY));
-    }
 
-    public String getIgdbBasePath() {
-        return String.valueOf(getPropertyByName(IGDB_BASE_PATH));
-    }
 }

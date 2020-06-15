@@ -1,7 +1,8 @@
-package com.adamclmns.jamm.core;
+package com.adamclmns.jamm.api.io;
 
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.UUID;
 
 /**
  * The interface Directory scanner service.
@@ -34,5 +35,8 @@ public interface IDirectoryScannerService {
      */
     public boolean verifyDirectory(Path directory, Collection<Path> knownPaths);
 
+    public Collection<UUID> importDirectoryRecursively(Path directory);
+
+    public UUID importFile(Path file);
 
 }
