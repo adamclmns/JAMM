@@ -37,6 +37,10 @@
             <groupId>com.adamclmns.jamm</groupId>
             <artifactId>disk-persistence</artifactId>
         </dependency>
+        <dependency>
+            <groupId>net.jthink</groupId>
+            <artifactId>jaudiotagger</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

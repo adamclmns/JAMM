@@ -1,17 +1,17 @@
 package com.adamclmns.jamm.impl.io;
 
-import com.adamclmns.jamm.models.EStarRating;
-import com.adamclmns.jamm.api.io.IMusicInfoService;
-import com.adamclmns.jamm.api.players.IMusicPlayerService;
+import com.adamclmns.jamm.api.io.EStarRating;
+import com.adamclmns.jamm.api.io.IMusicInfo;
+import com.adamclmns.jamm.api.players.IMusicPlayer;
 
 import java.nio.file.Path;
 
-public class MusicInfoService implements IMusicInfoService {
+public class MusicInfo implements IMusicInfo {
 
     private final Object FileInfoStore = null; // TODO: ? Type?
     private final Path path;
 
-    MusicInfoService(final Path path){
+    MusicInfo(final Path path){
         this.path = path;
     }
 
@@ -56,7 +56,10 @@ public class MusicInfoService implements IMusicInfoService {
     }
 
     @Override
-    public IMusicPlayerService getPlayer() {
+    public IMusicPlayer getPlayer() {
         return null;
     }
+
+
+
 }

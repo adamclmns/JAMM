@@ -1,9 +1,8 @@
 package com.adamclmns.jamm.api.io;
 
-import com.adamclmns.jamm.api.players.IMusicPlayerService;
-import com.adamclmns.jamm.models.EStarRating;
+import com.adamclmns.jamm.api.players.IMusicPlayer;
 
-public interface IMusicInfoService {
+public interface IMusicInfo {
     public String getTitle();
     public String getArtist();
     public String getAlbum();
@@ -13,5 +12,5 @@ public interface IMusicInfoService {
     public byte[] getNotes();
     public EStarRating getRating();
 
-    public IMusicPlayerService getPlayer();
+    public IMusicPlayer getPlayer();
 }

@@ -1,4 +1,4 @@
-package com.adamclmns.jamm.api.io;
+package com.adamclmns.jamm.api.scanning;
 
 import java.nio.file.Path;
 import java.util.Collection;

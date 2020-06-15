@@ -19,7 +19,6 @@
         <module>core-api</module>
         <module>core-impl</module>
         <module>application</module>
-        <module>models</module>
     </modules>
 
     <properties>

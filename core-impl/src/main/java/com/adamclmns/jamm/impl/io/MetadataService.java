@@ -1,26 +1,25 @@
 package com.adamclmns.jamm.impl.io;
 
+import com.adamclmns.jamm.api.io.IFileInfo;
 import com.adamclmns.jamm.api.io.IMetadataService;
-import com.adamclmns.jamm.api.io.IMusicInfoService;
-import com.adamclmns.jamm.models.FileInfo;
+import com.adamclmns.jamm.api.io.IMusicInfo;
 
 import java.nio.file.Path;
 import java.util.UUID;
 
 public class MetadataService implements IMetadataService {
+
+
     @Override
-    public FileInfo getFileSystemMetadata(Path path) {
+    public IFileInfo getFileSystemMetadata() {
         return null;
     }
 
     @Override
-    public IMusicInfoService getMp3Metadata(Path path) {
+    public IMusicInfo getMp3Metadata() {
         return null;
     }
 
-    @Override
-    public IMusicInfoService getMp3Metadata(Path path, UUID id) {
-        return null;
-    }
+
 
 }

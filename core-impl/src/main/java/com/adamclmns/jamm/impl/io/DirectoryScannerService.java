@@ -1,6 +1,6 @@
 package com.adamclmns.jamm.impl.io;
 
-import com.adamclmns.jamm.api.io.IDirectoryScannerService;
+import com.adamclmns.jamm.api.scanning.IDirectoryScannerService;
 
 import java.nio.file.Path;
 import java.util.Collection;

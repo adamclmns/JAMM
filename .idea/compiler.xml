@@ -8,13 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fx-views" />
         <module name="core-api" />
-        <module name="core-models" />
         <module name="disk-persistence" />
         <module name="application" />
         <module name="core-impl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="core-models" target="13" />
       <module name="JAMM" target="13" />
     </bytecodeTargetLevel>
   </component>

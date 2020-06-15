@@ -10,6 +10,11 @@
     </description>
     <dependencies>
         <dependency>
+            <groupId>net.jthink</groupId>
+            <artifactId>jaudiotagger</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>com.adamclmns.jamm</groupId>
             <artifactId>core-api</artifactId>
             <scope>provided</scope>

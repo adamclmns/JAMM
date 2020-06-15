@@ -16,15 +16,6 @@
         <relativePath>../</relativePath>
     </parent>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>disk-persistence</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>

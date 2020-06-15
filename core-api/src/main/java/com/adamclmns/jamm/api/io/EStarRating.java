@@ -1,4 +1,4 @@
-package com.adamclmns.jamm.models;
+package com.adamclmns.jamm.api.io;
 
 public enum EStarRating {
     NULL(0),ONE(1),TWO(2),THREE(3),FOUR(4),FIVE(5);
