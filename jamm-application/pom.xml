@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>application</artifactId>
+    <artifactId>jamm-application</artifactId>
 
     <description>
         Launch And Configuration Code, Context Management, Etc.
@@ -23,15 +23,15 @@
     <dependencies>
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>fx-views</artifactId>
+            <artifactId>fx-ui</artifactId>
         </dependency>
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>core-impl</artifactId>
+            <artifactId>jamm-core-impl</artifactId>
         </dependency>
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>core-api</artifactId>
+            <artifactId>jamm-api</artifactId>
         </dependency>
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>

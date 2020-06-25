@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="application" />
-        <module name="core-impl" />
+        <module name="fx-ui" />
+        <module name="jamm-application" />
         <module name="disk-persistence" />
-        <module name="fx-views" />
-        <module name="core-api" />
+        <module name="jamm-core-impl" />
+        <module name="jamm-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

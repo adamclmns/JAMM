@@ -13,12 +13,13 @@
     <name>jamm-root</name>
 
     <url>http://github.com/adamclmns/jamm</url>
+
     <modules>
         <module>disk-persistence</module>
-        <module>fx-views</module>
-        <module>core-api</module>
-        <module>core-impl</module>
-        <module>application</module>
+        <module>fx-ui</module>
+        <module>jamm-api</module>
+        <module>jamm-core-impl</module>
+        <module>jamm-application</module>
     </modules>
 
     <properties>
@@ -107,7 +108,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.adamclmns.jamm</groupId>
-                <artifactId>fx-views</artifactId>
+                <artifactId>fx-ui</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -117,17 +118,12 @@
             </dependency>
             <dependency>
                 <groupId>com.adamclmns.jamm</groupId>
-                <artifactId>core-api</artifactId>
+                <artifactId>jamm-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.adamclmns.jamm</groupId>
-                <artifactId>core-impl</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.adamclmns.jamm</groupId>
-                <artifactId>core-models</artifactId>
+                <artifactId>jamm-core-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- Java FX Dependencies -->
@@ -187,18 +183,6 @@
                     <version>${maven-surefire-report-plugin.version}</version>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven-jar-plugin.version}</version>
-                    <configuration>
-                        <archive>
-                            <manifest>
-                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            </manifest>
-                        </archive>
-                    </configuration>
-                </plugin>
-                <plugin>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>${maven-install-plugin.version}</version>
                 </plugin>
@@ -217,6 +201,18 @@
                             <version>${doxia-module-markdown.version}</version>
                         </dependency>
                     </dependencies>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            </manifest>
+                        </archive>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>

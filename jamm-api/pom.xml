@@ -3,28 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>core-impl</artifactId>
+    <artifactId>jamm-api</artifactId>
 
     <description>
-        Core Functionality and Non-Framework code
+        Core Functionality Defined as Interfaces
     </description>
-    <dependencies>
-        <dependency>
-            <groupId>net.jthink</groupId>
-            <artifactId>jaudiotagger</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>core-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>disk-persistence</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 
     <parent>
         <artifactId>jamm-root</artifactId>
@@ -32,7 +15,6 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
-
 
     <build>
         <plugins>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>fx-views</artifactId>
+    <artifactId>fx-ui</artifactId>
 
     <description>
        Java FX UI Components
@@ -20,7 +20,7 @@
         <!-- Don't depend on the Implementation Directly, EVER!!! -->
         <dependency>
             <groupId>com.adamclmns.jamm</groupId>
-            <artifactId>core-api</artifactId>
+            <artifactId>jamm-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <!-- Java FX Dependencies -->
